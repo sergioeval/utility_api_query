@@ -10,7 +10,7 @@ def runEpmQueryApi(sql_query: str, key: str, cirrusHostname: str):
     encrypted_sql = cipher.encrypt(sql_query.encode())
     encrypted_sql = encrypted_sql.decode('utf-8')
     
-    url = f'https://{cirrusHostname}/get_data'
+    url = f'https://{cirrusHostname}/spend/get_data'
     headers = {
         'Content-type': 'application/json'
     }
